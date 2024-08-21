@@ -1,0 +1,9 @@
+  name: fancy
+  run-name: fancy running
+  on:
+    - push
+  jobs:
+    something:
+      runs-on: ubuntu-latest
+      steps:
+        - run: echo "hi this is fancy"
