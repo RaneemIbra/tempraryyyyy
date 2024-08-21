@@ -7,6 +7,6 @@
       runs-on: ubuntu-latest
       steps:
         - run: echo "compiling java"
-        - run: ls ${{github.workspace}}
+        - run: ls -r ${{github.workspace}}
         - run: javac main.java
         - run: java main
