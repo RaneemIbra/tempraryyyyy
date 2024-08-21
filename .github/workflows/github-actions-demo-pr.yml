@@ -1,0 +1,11 @@
+  name: fancy
+  run-name: fancy running
+  on:
+    - push
+  jobs:
+    something:
+      runs-on: ubuntu-latest
+      steps:
+        - run: echo "compiling java"
+        - run: javac main.java
+        - run: java main
