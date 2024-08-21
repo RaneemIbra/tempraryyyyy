@@ -15,4 +15,7 @@
             distribution: adopt
         - run: echo "compiling java"
         - run: ls -r ${{github.workspace}}
-        - run: mvn test
+        - name: clean install
+          run: (mvn package -U) && (mvn install -U) && (mvn dependency:resolve -U)
+        - name: maven tests
+          run: mvn test
