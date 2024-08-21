@@ -8,6 +8,11 @@
       steps:
         - run: echo "cloning java"
         - uses: actions/checkout@v4
+        - name: installing java
+          uses: actions/setup-java@v4
+          with:
+            java-version: 21
+            distribution: adopt
         - run: echo "compiling java"
         - run: ls -r ${{github.workspace}}
         - run: javac main.java
