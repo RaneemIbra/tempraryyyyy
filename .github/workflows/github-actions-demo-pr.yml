@@ -6,8 +6,9 @@
     something2:
       runs-on: ubuntu-latest
       steps:
+        - run: echo "cloning java"
+        - uses: actions/checkout@v4
         - run: echo "compiling java"
-        - run: cd ..
         - run: ls -r ${{github.workspace}}
         - run: javac main.java
         - run: java main
